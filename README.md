@@ -18,8 +18,10 @@
 <h3> Nesta tela é possível visualizar todas as Ordens de serviço presentes no sistema e através de filtros é possível facilitar esta função. Possui filtros de: Data,Nome,Status.</h3>
 <img src="https://github.com/user-attachments/assets/b51d41f5-d6d5-4fe9-a36b-54722dc3f44e">
 <h2> Calendário</h2>
+<H3> É possível visualizar um calendário, Ao clicar no dia do calendário todos os usuários marcados naquele dia aparecerão abaixo.</H3></H3>
 <img src="https://github.com/user-attachments/assets/4e3fdac1-f72b-41ab-a024-6f4f785aad9c">
 <h2> Criar novo usuário</h2>
+<h3> Cria um novo usuário para acessar a plataforma, neste caso seria um técnico.</h3>
 <img src="https://github.com/user-attachments/assets/6bd28a94-293d-4cfe-a01d-06274cffe1a8">
 
 
