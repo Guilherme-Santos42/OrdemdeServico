@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+<h1> Aplicativo Ordem de serviço</h1>
+<h2> Este aplicativo tem como intuito ser um organizador de Ordens de serviço,serviços e clientes. É perfeito para empresas que possuem técnicos trabalhando em campo e precisam de uma organização em seus chamados.</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3> Tela de Login: </h3>
+<h4> Existem 2 Logins, administrador e técnico comum, o administrador tem acesso a todas as funções, no entanto o técnico apenas possui acesso a Visualizar OS</h4>
+<img src="https://github.com/user-attachments/assets/a8abb28b-2ea7-47e5-84fb-91bb8c4f69f7">
+<h3> Dashboard: </h3>
+<img src="https://github.com/user-attachments/assets/805899e1-c4da-4eaf-847e-54b293f521e8">
+<h3> Funções: </h3>
+<h2> Cadastrar OS</h2>
+<img src="https://github.com/user-attachments/assets/e623201f-f883-48f8-9fad-7ec56b60c41f">
+<h2> Cadastrar Serviço</h2>
+<img src="https://github.com/user-attachments/assets/729e3ff1-f470-41a5-a03d-8ed26b58bdf4">
+<h2> Clientes </h2>
+<img src="https://github.com/user-attachments/assets/fb9d13d1-0788-4d27-8f81-1c5643adc1b2">
+<h2> Visualizar OS</h2>
+<img src="https://github.com/user-attachments/assets/b51d41f5-d6d5-4fe9-a36b-54722dc3f44e">
+<h2> Calendário</h2>
+<img src="https://github.com/user-attachments/assets/4e3fdac1-f72b-41ab-a024-6f4f785aad9c">
+<h2> Criar novo usuário</h2>
+<img src="https://github.com/user-attachments/assets/6bd28a94-293d-4cfe-a01d-06274cffe1a8">
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
