@@ -72,7 +72,6 @@ function CadastrarCliente() {
     setFilteredClientes(filtered);
   };
 
-  // Função de edição de cliente
   const handleEdit = (cliente) => {
     setEditingCliente(cliente);
     setFormData({
@@ -86,13 +85,14 @@ function CadastrarCliente() {
     setShowModal(true); // Abre o modal de edição
   };
 
-  // Função de exclusão de cliente
   const handleDelete = async (id) => {
     if (window.confirm("Tem certeza que deseja excluir este cliente?")) {
       try {
         await axios.delete(`http://localhost:5000/api/clientes/${id}`);
         alert("Cliente excluído com sucesso!");
-        fetchClientes(); // Atualiza a lista de clientes após a exclusão
+        // Atualiza a lista local sem necessidade de nova requisição
+        setClientes((prevClientes) => prevClientes.filter((cliente) => cliente._id !== id));
+        setFilteredClientes((prevFiltered) => prevFiltered.filter((cliente) => cliente._id !== id));
       } catch (error) {
         console.error("Erro ao excluir cliente:", error);
         alert("Erro ao excluir cliente.");
@@ -109,10 +109,12 @@ function CadastrarCliente() {
     e.preventDefault();
     try {
       if (editingCliente) {
+        // Se estiver editando, envia a requisição PUT
         await axios.put(`http://localhost:5000/api/clientes/${editingCliente._id}`, formData);
         alert("Cliente atualizado com sucesso!");
         setEditingCliente(null);
       } else {
+        // Se estiver criando, envia a requisição POST
         await axios.post("http://localhost:5000/api/clientes", formData);
         alert("Cliente cadastrado com sucesso!");
       }
@@ -124,28 +126,30 @@ function CadastrarCliente() {
         rua: "",
         numeroResidencia: "",
       });
-      fetchClientes();
+      fetchClientes(); // Atualiza a lista de clientes após a operação
       setShowModal(false); // Fecha o modal após o envio
     } catch (error) {
       console.error("Erro ao salvar cliente:", error);
       alert("Erro ao salvar cliente.");
     }
   };
+  
 
   return (
     <div className="cadastrar-cliente">
+       <h1> Clientes</h1>
       <div className="actions-container">
+     
         <button onClick={() => setShowModal(true)} className="btn-add">
           <FaPlus /> Cadastrar Cliente
         </button>
         
-        {/* Botões de Importação e Exportação */}
         <label className="btn-importar">
           <FaFileImport /> Importar Clientes
           <input type="file" onChange={handleFileUpload} style={{ display: 'none' }} />
         </label>
 
-        <button className="btn-exportar" onClick={handleExport} >
+        <button className="btn-exportar" onClick={handleExport}>
           <FaFileExport /> Exportar Clientes
         </button>
 
@@ -161,7 +165,6 @@ function CadastrarCliente() {
         </div>
       </div>
 
-      {/* Modal para o Formulário */}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -175,7 +178,6 @@ function CadastrarCliente() {
                   name="nome"
                   value={formData.nome}
                   onChange={handleChange}
-                  placeholder="Digite o nome do cliente"
                   required
                 />
               </div>
@@ -187,7 +189,6 @@ function CadastrarCliente() {
                   name="telefoneCelular"
                   value={formData.telefoneCelular}
                   onChange={handleChange}
-                  placeholder="Digite o telefone celular"
                   required
                 />
               </div>
@@ -199,7 +200,6 @@ function CadastrarCliente() {
                   name="telefoneFixo"
                   value={formData.telefoneFixo}
                   onChange={handleChange}
-                  placeholder="Digite o telefone fixo"
                 />
               </div>
               <div className="form-group">
@@ -210,7 +210,6 @@ function CadastrarCliente() {
                   name="bairro"
                   value={formData.bairro}
                   onChange={handleChange}
-                  placeholder="Digite o bairro"
                   required
                 />
               </div>
@@ -222,7 +221,6 @@ function CadastrarCliente() {
                   name="rua"
                   value={formData.rua}
                   onChange={handleChange}
-                  placeholder="Digite a rua"
                   required
                 />
               </div>
@@ -234,7 +232,6 @@ function CadastrarCliente() {
                   name="numeroResidencia"
                   value={formData.numeroResidencia}
                   onChange={handleChange}
-                  placeholder="Digite o número da residência"
                   required
                 />
               </div>

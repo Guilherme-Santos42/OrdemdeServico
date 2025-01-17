@@ -270,3 +270,40 @@ app.post("/api/login", async (req, res) => {
     res.status(500).send("Erro ao autenticar usuário");
   }
 });
+
+// Rota para excluir um cliente
+app.delete("/api/clientes/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const clienteRemovido = await Cliente.findByIdAndDelete(id);
+
+    if (!clienteRemovido) {
+      return res.status(404).send("Cliente não encontrado");
+    }
+
+    res.status(200).send("Cliente excluído com sucesso");
+  } catch (error) {
+    console.error("Erro ao excluir cliente:", error);
+    res.status(500).send("Erro ao excluir cliente");
+  }
+});
+
+// Rota para editar um cliente
+app.put("/api/clientes/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const dadosAtualizados = req.body;
+
+    // Atualiza o cliente no banco de dados
+    const clienteAtualizado = await Cliente.findByIdAndUpdate(id, dadosAtualizados, { new: true });
+
+    if (!clienteAtualizado) {
+      return res.status(404).send("Cliente não encontrado");
+    }
+
+    res.status(200).send(clienteAtualizado);
+  } catch (error) {
+    console.error("Erro ao editar cliente:", error);
+    res.status(500).send("Erro ao editar cliente");
+  }
+});
