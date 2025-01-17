@@ -15,10 +15,7 @@
 <h3> Através desta tela, é possivel visualizar todos os clientes cadastrados, criar novos e também realizar exclusão ou edição. Existem opções para importar novos clientes e também exportar os existentes.</h3>
 <img src="https://github.com/user-attachments/assets/fb9d13d1-0788-4d27-8f81-1c5643adc1b2">
 <h2> Visualizar OS</h2>
-<h3> Nesta tela é possível visualizar todas as Ordens de serviço presentes no sistema e através de filtros é possível facilitar esta função. Possui filtros de:<br>
-- Data
-- Nome
-- Colaborador</h3>
+<h3> Nesta tela é possível visualizar todas as Ordens de serviço presentes no sistema e através de filtros é possível facilitar esta função. Possui filtros de: Data,Nome,Status.</h3>
 <img src="https://github.com/user-attachments/assets/b51d41f5-d6d5-4fe9-a36b-54722dc3f44e">
 <h2> Calendário</h2>
 <img src="https://github.com/user-attachments/assets/4e3fdac1-f72b-41ab-a024-6f4f785aad9c">
