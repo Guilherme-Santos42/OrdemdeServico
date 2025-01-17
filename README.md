@@ -12,6 +12,7 @@
 <h2> Cadastrar Serviço</h2>
 <img src="https://github.com/user-attachments/assets/729e3ff1-f470-41a5-a03d-8ed26b58bdf4">
 <h2> Clientes </h2>
+<h3> Através desta tela, é possivel visualizar todos os clientes cadastrados, criar novos e também realizar exclusão ou edição. Existem opções para importar novos clientes e também exportar os existentes.</h3>
 <img src="https://github.com/user-attachments/assets/fb9d13d1-0788-4d27-8f81-1c5643adc1b2">
 <h2> Visualizar OS</h2>
 <img src="https://github.com/user-attachments/assets/b51d41f5-d6d5-4fe9-a36b-54722dc3f44e">
